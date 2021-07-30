@@ -9,7 +9,7 @@ export default function ProductScreen(props) {
 
     useEffect(() => {
         async function fetchProduct() {
-            const { data } = await axios.get(`http://127.0.0.1:8000/products/${props.match.params.id}`)
+            const { data } = await axios.get(`http://127.0.0.1:8000/product/${props.match.params.id}`)
             setProduct(data)
         }
         fetchProduct()
